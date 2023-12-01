@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container{
+            width: 50%;
+            height: 80vh;
+            margin: auto;
+            display: grid;
+            grid-template-areas: "b1 b1 b2 b3"
+                                ". b5 b2 ."
+                                "b6 . b2 b7";
+        }
+
+        /* @media all and (min-width: 551px) and (max-width: 700px) {
+            .box{
+                   grid-template-columns: repeat(3, 1fr);
+            }
+        } */
+
+        @media all and (min-width: 481px) and (max-width: 768px) {
+
+            .container{
+                grid-template-areas: "b1 b3 b3 b6"
+                                    "b1 b2 . b6"
+                                    "b5 b2 . b7";
+            }   
+        }
+
+        @media all and (max-width: 480px) {
+            .container{
+                grid-template-areas: "b1 . b3 b6"
+                                    "b1 b2 . b6"
+                                    "b5 b2 . b7";
+            } 
+        }
+
+        .container>div:nth-child(1){
+            grid-area: b1;
+            /* height: 50px;
+            width: 50px; */
+            background-color: #ed213b;
+        }
+
+        .container>div:nth-child(2){
+            grid-area: b2;
+            background-color: #636940;
+        }
+
+        .container>div:nth-child(3){
+            grid-area: b3;
+            background-color: #c1ff72;
+        }
+
+        .container>div:nth-child(4){
+            grid-area: b4;
+            background-color: white;
+        }
+
+        .container>div:nth-child(5){
+            grid-area: b5;
+            background-color: #ffbd59;
+        }
+        .container>div:nth-child(6){
+            grid-area: b6;
+            background-color: #59a96a;
+        }
+        .container>div:nth-child(7){
+            grid-area: b7;
+            background-color: #cb6ce6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>
